@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Page with Quiz, Weather & Jokes</title>
+    <link rel="stylesheet" href="Task3.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#galleryCarousel" class="nav-link">Gallery Carousel</a></li>
+                <li><a href="#quiz-section" class="nav-link">Quiz</a></li>
+                <li><a href="#joke-section" class="nav-link">Joke</a></li>
+                <li><a href="#weather-section" class="nav-link">Weather</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Image Carousel</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+            /* Additional styling for carousel */
+            .carousel-inner>.item>img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            /* Optional custom styling for carousel container */
+            .carousel {
+                margin-top: 30px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="container">
+            <div id="galleryCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#galleryCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#galleryCarousel" data-slide-to="1"></li>
+                    <li data-target="#galleryCarousel" data-slide-to="2"></li>
+                    <li data-target="#galleryCarousel" data-slide-to="3"></li>
+                    <li data-target="#galleryCarousel" data-slide-to="4"></li>
+                    <li data-target="#galleryCarousel" data-slide-to="5"></li>
+                    <li data-target="#galleryCarousel" data-slide-to="6"></li>
+                    <li data-target="#galleryCarousel" data-slide-to="7"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="1.webp" alt="Image 1">
+                    </div>
+                    <div class="item">
+                        <img src="2.jpeg" alt="Image 2">
+                    </div>
+                    <div class="item">
+                        <img src="3.jpeg" alt="Image 3">
+                    </div>
+                    <div class="item">
+                        <img src="4.jpeg" alt="Image 4">
+                    </div>
+                    <div class="item">
+                        <img src="5.jpeg" alt="Image 4">
+                    </div>
+                    <div class="item">
+                        <img src="6.jpeg" alt="Image 4">
+                    </div>
+                    <div class="item">
+                        <img src="7.jpeg" alt="Image 4">
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#galleryCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#galleryCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+
+
+        <div class="container">
+
+
+
+            <!-- Quiz Section -->
+            <section id="quiz-section" class="section">
+                <div class="quiz-container" id="quizContainer">
+                    <h3>Quiz Time</h3>
+                    <img id="quizImage" class="quiz-image" src="" alt="Quiz Clue">
+                    <p id="question" class="question"></p>
+                    <div id="options" class="options"></div>
+                    <div class="result" id="quizResult"></div>
+                </div>
+            </section>
+
+            <!-- Joke Section -->
+            <section id="joke-section" class="section">
+                <div class="joke-container">
+                    <h3>Joke Time</h3>
+                    <p id="jokeEmoji">😂</p>
+                    <p id="joke"></p>
+                    <button onclick="fetchJoke()">Get Another Joke</button>
+                </div>
+            </section>
+
+            <!-- Weather Section -->
+            <section id="weather-section" class="section">
+                <div class="api-container">
+                    <h3>Weather</h3>
+                    <input type="text" id="cityInput" placeholder="Enter city name" />
+                    <button onclick="getWeather()">Get Weather</button>
+                    <p id="weather"></p>
+                </div>
+            </section>
+
+
+        </div>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>© 2024 Interactive Web Page</p>
+        </footer>
+
+        <script src="Task3.js"></script>
+    </body>
+
+</html>
+/* General Body Styling */
